@@ -6,7 +6,7 @@
 
 package 'haproxy'
 
-allwebservers = search('node', 'recipes:apache\:\:default')
+allwebservers = search('node', 'name:my_web*')
 
 template '/etc/haproxy/haproxy.cfg' do
   source 'haproxy.cfg.erb'
